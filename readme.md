@@ -1,5 +1,7 @@
 ## Overview
 
+[![Build Status](https://travis-ci.org/ysmood/ruby-nisp.svg)](https://travis-ci.org/ysmood/ruby-nisp)
+
 For more info: https://github.com/ysmood/nisp
 
 ## Installation
