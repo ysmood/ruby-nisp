@@ -38,4 +38,28 @@ class NispTest < MiniTest::Test
       )
     end
   end
+
+  def test_macro
+    out = Nisp.run(
+      ast: ['+', 1, 2],
+      env: 3,
+      sandbox: {
+        '+' => Nisp::MacroFn.new { |ctx| ctx[:env] + Nisp.arg(ctx, 1) + Nisp.arg(ctx, 2) }
+      }
+    )
+
+    assert_equal 6, out
+  end
+
+  def test_env
+    out = Nisp.run(
+      ast: ['+', 1, 2],
+      env: 3,
+      sandbox: {
+        '+' => ->(a, b) { a + b + self }
+      }
+    )
+
+    assert_equal 6, out
+  end
 end

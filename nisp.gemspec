@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'nisp'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2018-04-09'
   s.summary     = 'Ruby implementaion for nisp'
   s.description = 'https://github.com/ysmood/nisp'

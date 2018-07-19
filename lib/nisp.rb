@@ -63,6 +63,6 @@ module Nisp
       i += 1
     end
 
-    fun.call(*args)
+    ctx[:env].instance_exec(*args, &fun)
   end
 end

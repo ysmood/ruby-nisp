@@ -17,9 +17,10 @@ require 'nisp'
 
 puts Nisp.run(
   ast: ['+', 1, 2],
+  env: 1,
   sandbox: {
-    '+' => ->(a, b) { a + b }
+    '+' => ->(a, b) { a + b + self }
   }
 )
-# output: 3
+# output: 4
 ```
